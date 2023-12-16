@@ -63,7 +63,7 @@ export const registerUser=asyncHandler(async (req,res)=>{
 
 export const loginUser=asyncHandler(async (req,res)=>{
     const {username,email,password}=req.body
-    if(!username || !email){
+    if(!(username || email)){
         throw new ApiError(400,"username and email does not exist");
     }
     const user=User.findOne({
