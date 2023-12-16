@@ -94,3 +94,7 @@ export const loginUser=asyncHandler(async (req,res)=>{
     ))
 
 })
+
+export const loggedOutUser = asyncHandler(async (req,res)=>{
+    
+})
